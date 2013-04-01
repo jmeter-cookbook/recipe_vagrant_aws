@@ -1,6 +1,6 @@
+include stdlib
+include apt
 include java
-#include apt
-#include stdlib
 
 package { ["vim",
 	           "curl",
@@ -12,11 +12,10 @@ package { ["vim",
 exec {
 		"download_jmeter":
 		command => "curl -L http://www.bizdirusa.com/mirrors/apache/jmeter/binaries/apache-jmeter-2.9.tgz | tar zx",
-		creates => "/home/vagrant/apache-jmeter-2.9",		
+		creates => "/home/ubuntu/apache-jmeter-2.9",		
 		timeout => 0,
-		cwd => "/home/vagrant",
-		user => "vagrant",
+		cwd => "/home/ubuntu",
+		user => "ubuntu",
 		path => "/usr/bin/:/bin",
-		#logoutput => true,		
 		require => Package[ "curl" ]
-	}
+	}	
