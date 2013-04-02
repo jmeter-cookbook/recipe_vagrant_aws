@@ -25,6 +25,7 @@ Vagrant.configure("2") do |config|
   # define multiple VMs.
   config.vm.define :vm1
   config.vm.define :vm2
+  config.vm.define :vm3
 
   # Create a forwarded port mapping which allows access to a specific port
   # within the machine from a port on the host machine. In the example below,
