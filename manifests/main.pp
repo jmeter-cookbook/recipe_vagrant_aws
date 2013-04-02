@@ -11,11 +11,11 @@ package { ["vim",
 
 exec {
 		"download_jmeter":
-		command => "curl -L http://www.bizdirusa.com/mirrors/apache/jmeter/binaries/apache-jmeter-2.9.tgz | tar zx",
-		creates => "/home/ubuntu/apache-jmeter-2.9",		
+		command => "curl -L http://www.bizdirusa.com/mirrors/apache/jmeter/binaries/apache-jmeter-2.9.tgz | tar zx && mv /usr/local/apache-jmeter-2.9 /usr/local/jmeter",
+		creates => "/usr/local/jmeter",		
 		timeout => 0,
-		cwd => "/home/ubuntu",
-		user => "ubuntu",
+		cwd => "/usr/local",
+		user => "root",
 		path => "/usr/bin/:/bin",
 		require => Package[ "curl" ]
 	}	
