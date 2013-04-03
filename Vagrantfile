@@ -18,6 +18,7 @@ Vagrant.configure("2") do |config|
     aws.secret_access_key = "YOUR AWS SECRET KEY"
     aws.keypair_name = "YOUR KEYPAIR NAME"
     aws.ssh_private_key_path = "PATH TO YOUR PRIVATE KEY"    
+    aws.region = "YOUR AWS REGION"
     aws.ami = "ami-7747d01e"
     aws.ssh_username = "ubuntu"
   end
