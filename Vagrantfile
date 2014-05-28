@@ -1,6 +1,6 @@
 Vagrant.configure("2") do |config|
-  config.vm.box = "precise64"
-  config.vm.box_url = "http://files.vagrantup.com/precise64.box"
+  config.vm.box = "awsbox"
+  config.vm.box_url = "https://github.com/mitchellh/vagrant-aws/raw/master/dummy.box"
 
   config.vm.provider :aws do |aws, override|
     aws.access_key_id = "YOUR AWS KEY ID"
@@ -16,8 +16,8 @@ Vagrant.configure("2") do |config|
   # define multiple VMs.
   config.vm.define :vm1
   config.vm.define :vm2
-  config.vm.define :vm3
-  config.vm.define :vm4
+  #config.vm.define :vm3
+  #config.vm.define :vm4
 
   config.vm.synced_folder "testplans", "/home/ubuntu/testplans"
 
